@@ -1,0 +1,124 @@
+Variables => holding some value
+
+// Creating a variable 
+// syntax
+var variableName = defaultValue;
+
+var x = 1;
+var y = 2;
+var name = 'Divya';
+
+//Viewing the value inside a variable
+console.log(x) => prints value of x to console
+alert(x) => displays value in alert box
+
+alert('Invalid UserName and Password');
+
+var z;
+alert(z) => displays undefined in alert box. ie defaultValue is undefined
+
+Setting the boolean value(true/false)
+var isAgent = true;
+
+Finding the value type - use helper function typeof
+
+typeof(x) => number
+typeof(name) => string
+typeof(isAgent) => boolean
+typeof(z) => undefined
+
+Types
+	number
+	string
+	boolean
+	undefined
+	
+	
+function => block of code for code-reusability
+// Creating a function - Approach 1
+// syntax
+function functionName(arguments){
+	return value if needed
+}
+
+// executing function
+functionName(params);
+
+
+function welcome(){
+	console.log('Welcome to Demo');
+}
+
+welcome();
+
+function addition(x, y){
+	return x + y;
+} 
+
+addition(10, 20) => 30
+x, y are called arguments of the function addition.
+10, 20 are called params to the called function.
+10 is copied to x and 20 is copied to y
+
+function subtraction(x, y){
+	console.log('x is ' + x);
+	console.log('y is ' + y);
+	return x - y;
+}
+subtraction(10, 20) => -10
+
+if one of the variables has undefined value, then result will be not a number ie NaN.
+1 + undefined => NaN
+1 - undefined => NaN
+1 /undefined => NaN
+1 * undefined => NaN
+
+subtraction(10, 20, 30) => -10
+10 is copied to x
+20 is copied to y
+30 is ignored ( Additional Params will be ignored inside called function)
+
+subtraction(10) => NaN
+10 is copied to x
+As y is not passed then it will set to default value of undefined
+
+Handling undefined is done using || operator
+
+var a;
+
+var d = a || 20;
+
+d => 20
+
+var l, m, n;
+
+var p = l || m || n || 40;
+p => 40
+
+n = 30
+p = l || m || n || 40;
+p => 30
+
+l = 10;
+p = l || m || n || 40;
+p => 10
+
+// Handling undefined in subtraction function
+function subtraction(x, y){
+	x = x || 0;
+	y = y || 0;
+	console.log('x is ' + x);
+	console.log('y is ' + y);
+	return x - y;
+}
+Subtraction(10) => 10
+
+// Self executing function -- Triggers itself
+// syntax
+(function functionName(){})();
+
+(function welcome() {
+	console.log('Welcome to Demo');
+})();
+
+

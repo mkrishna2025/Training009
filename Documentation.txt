@@ -1,0 +1,10 @@
+Javascript(5 to 7)
+	Basics
+	InDepth
+	OOPs - ES6
+		   Typescript
+		   
+HTML - very little basics(2)
+React with HTML(7 to 9)
+Node(1)
+React with Node(Project - 10)
